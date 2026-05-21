@@ -1,0 +1,10 @@
+curl http://localhost:5000/predict \
+     -H "Content-Type: application/json" \
+     -d '{
+           "area": 1000,
+           "bedrooms": 3,
+           "bathrooms": 1,
+           "parking": 2,
+           "location": "suburban"
+         }'
+         

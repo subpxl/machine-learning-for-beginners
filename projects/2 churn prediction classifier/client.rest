@@ -1,0 +1,23 @@
+curl -X POST http://localhost:5000/predict \
+-H "Content-Type: application/json" \
+-d '{
+  "tenure": 2,
+  "monthly_charges": 720,
+  "support_calls": 14,
+  "contract_type": "Monthly",
+  "internet_service": "Fiber",
+  "payment_method": "Electronic"
+}'
+
+
+### 
+curl -X POST http://localhost:5000/predict \
+-H "Content-Type: application/json" \
+-d '{
+  "tenure": 65,
+  "monthly_charges": 25,
+  "support_calls": 0,
+  "contract_type": "Two Year",
+  "internet_service": "DSL",
+  "payment_method": "Bank Transfer"
+}'

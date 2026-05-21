@@ -1,0 +1,4 @@
+scikit-image
+librosa
+scikit-learn
+numpy

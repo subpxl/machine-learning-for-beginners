@@ -1,0 +1,9 @@
+xgboost
+requests
+fastapi
+uvicorn
+httpx
+onnxmltools 
+onnx 
+onnxruntime 
+skl2onnx
