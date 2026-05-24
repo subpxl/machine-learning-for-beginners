@@ -1,19 +1,21 @@
-from sklearn.model_selection import cross_val_predict
-from sklearn.linear_model import LinearRegression
-import numpy as np
+from sklearn.datasets import make_classification
+from sklearn.linear_model import LogisticRegression
+from sklearn.model_selection import cross_val_score
 
-x = np.array([
-    [1],
-    [2],
-    [3],
-    [4],
-    [5]
-])
+x,y = make_classification(
+    n_samples=1000,
+    n_features=10,
+    random_state=42
+)
 
-y = np.array([2,4,6,8,10])
+model =LogisticRegression()
 
-model = LinearRegression()
-
-scores = cross_val_predict(model,x,y,cv=3)
+scores = cross_val_score(
+    model,
+    x,
+    y,
+    cv=5
+)
 
 print(scores)
+print("mean cv score",scores.mean())
